@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!--icons-->
+    <script src="https://kit.fontawesome.com/5e4eaeffdb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <!--contacts sidebar-->
+            <div class="app-sidebar">
+                <div class="side-header">
+                    <div class="row space-between">
+                        <img class="avatar" src="./img/avatar_io.jpg"/>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-notch"></i></li>
+                            <li><i class="fa-solid fa-message"></i></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="side-notif">
+                    <div class="row">
+                        <div class="card">
+                            <div class="button-round"><i class="fa-solid fa-bell-slash"></i></div>
+                            <div>
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <p class="text-small font-dark-grey"><u>Attiva notifiche desktop</u></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-search">
+                    <div class="row">
+                        <input class="input-bar" type="text" id="chat" name="new-chat" placeholder="Cerca o inizia una nuova chat" />
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                </div>
+                <ul class="side-contacts">
+                    <li class="card-box">
+                        <div class="card">
+                            <img class="avatar" src="./img/avatar_1.jpg"/>
+                            <div>
+                                <p>Michele</p>
+                                <p class="text-small font-light-grey">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                        <p class="text-small font-light-grey">16:15</p>
+                    </li>
+                    <li class="card-box">
+                        <div class="card">
+                            <img class="avatar" src="./img/avatar_2.jpg"/>
+                            <div>
+                                <p>Fabio</p>
+                                <p class="text-small font-light-grey">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                        <p class="text-small font-light-grey">16:05</p>
+                    </li>
+                    <li class="card-box">
+                        <div class="card">
+                            <img class="avatar" src="./img/avatar_3.jpg"/>
+                            <div>
+                                <p>Samuele</p>
+                                <p class="text-small font-light-grey">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                        <p class="text-small font-light-grey">16:03</p>
+                    </li>
+                    <li class="card-box">
+                        <div class="card">
+                            <img class="avatar" src="./img/avatar_4.jpg"/>
+                            <div>
+                                <p>Alessandro B.</p>
+                                <p class="text-small font-light-grey">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                        <p class="text-small font-light-grey">15:50</p>
+                    </li>
+                    <li class="card-box">
+                        <div class="card">
+                            <img class="avatar" src="./img/avatar_5.jpg"/>
+                            <div>
+                                <p>Alessandro L.</p>
+                                <p class="text-small font-light-grey">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                        <p class="text-small font-light-grey">15:45</p>
+                    </li>
+                    <li class="card-box">
+                        <div class="card">
+                            <img class="avatar" src="./img/avatar_6.jpg"/>
+                            <div>
+                                <p>Claudia</p>
+                                <p class="text-small font-light-grey">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                        <p class="text-small font-light-grey">15:40</p>
+                    </li>
+                    <li class="card-box">
+                        <div class="card">
+                            <img class="avatar" src="./img/avatar_7.jpg"/>
+                            <div>
+                                <p>Federico</p>
+                                <p class="text-small font-light-grey">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                        <p class="text-small font-light-grey">15:22</p>
+                    </li>
+                    <li class="card-box">
+                        <div class="card">
+                            <img class="avatar" src="./img/avatar_8.jpg"/>
+                            <div>
+                                <p>Davide</p>
+                                <p class="text-small font-light-grey">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                        <p class="text-small font-light-grey">15:15</p>
+                    </li>
+                </ul>
+            </div>
+            <!--chat box-->
+            <div class="app-main">
+                <div class="main-header">
+                    <div class="row space-between">
+                        <div class="card">
+                            <img class="avatar" src="./img/avatar_1.jpg"/>
+                            <div>
+                                <p>Michele</p>
+                                <p class="text-small font-dark-grey">Ultimo accesso oggi alle 16:26</p>
+                            </div>
+                        </div>  
+                        <ul>
+                            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                            <li><i class="fa-solid fa-paperclip"></i></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-body">
+                    <div class="chat-box chat-box-sent">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis alias repellendus id at vero sunt consectetur asperiores temporibus iure molestias, cum nisi beatae quos vitae itaque culpa a enim dignissimos?</p>
+                        <div class="dropdown">
+                            <i class="font-light-grey fa-solid fa-angle-down"></i>
+                            <div class="dropdown-content">
+                                <a rel="noopener" target="_blank" href="#">Rispondi</a>
+                                <a rel="noopener" target="_blank" href="#">Inoltra</a>
+                                <a rel="noopener" target="_blank" href="#">Cancella</a>
+                            </div>
+                        </div>
+                        <span class="time text-small">16:13</span>
+                    </div>
+                    <div class="chat-box chat-box-received">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tenetur, ad molestiae nemo eum ducimus sed quos, cupiditate similique veniam non provident? Dolores sapiente eaque in esse officiis odio libero!</p>
+                        <div class="dropdown">
+                            <i class="font-light-grey fa-solid fa-angle-down"></i>
+                            <div class="dropdown-content">
+                                <a rel="noopener" target="_blank" href="#">Rispondi</a>
+                                <a rel="noopener" target="_blank" href="#">Inoltra</a>
+                                <a rel="noopener" target="_blank" href="#">Cancella</a>
+                            </div>
+                        </div>
+                        <span class="time text-small">16:15</span>
+                    </div>
+                </div>
+                <div class="main-footer">
+                    <div class="row">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <input class="input-bar" type="text" id="chat" name="new-chat" placeholder="Scrivi un messaggio" />
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
