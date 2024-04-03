@@ -149,8 +149,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="main-body" v-for="(message, i) in contactsList[currentContactIndex].messages">
-                    <div :class="message.status === 'sent' ? 'chat-box-sent' : 'chat-box-received'"  class="chat-box">
+                <div class="main-body">
+                    <div v-for="(message, i) in contactsList[currentContactIndex].messages" :class="message.status === 'sent' ? 'chat-box-sent' : 'chat-box-received'"  class="chat-box">
                         <p>{{message.message}}</p>
                         <div class="dropdown">
                             <i class="font-light-grey fa-solid fa-angle-down"></i>
