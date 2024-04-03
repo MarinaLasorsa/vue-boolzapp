@@ -49,7 +49,7 @@
 
                 </div>
                 <ul class="side-contacts">
-                    <li class="card-box" v-for="(contact, i) in contactsList">
+                    <li class="card-box" v-for="(contact, i) in contactsList" @click="changeCurrentIndex(i)">
                         <div class="card">
                             <img class="avatar" :src="contact.avatar"/>
                             <div>
@@ -136,9 +136,9 @@
                 <div class="main-header">
                     <div class="row space-between">
                         <div class="card">
-                            <img class="avatar" src="./img/avatar_1.jpg"/>
+                            <img class="avatar" :src="contactsList[currentContactIndex].avatar"/>
                             <div>
-                                <p>Michele</p>
+                                <p>{{contactsList[currentContactIndex].name}}</p>
                                 <p class="text-small font-dark-grey">Ultimo accesso oggi alle 16:26</p>
                             </div>
                         </div>  
@@ -149,9 +149,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="main-body">
-                    <div class="chat-box chat-box-sent">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis alias repellendus id at vero sunt consectetur asperiores temporibus iure molestias, cum nisi beatae quos vitae itaque culpa a enim dignissimos?</p>
+                <div class="main-body" v-for="(message, i) in contactsList[currentContactIndex].messages">
+                    <div :class="message.status === 'sent' ? 'chat-box-sent' : 'chat-box-received'"  class="chat-box">
+                        <p>{{message.message}}</p>
                         <div class="dropdown">
                             <i class="font-light-grey fa-solid fa-angle-down"></i>
                             <div class="dropdown-content">
@@ -162,7 +162,7 @@
                         </div>
                         <span class="time text-small">16:13</span>
                     </div>
-                    <div class="chat-box chat-box-received">
+                    <!--<div class="chat-box chat-box-received">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tenetur, ad molestiae nemo eum ducimus sed quos, cupiditate similique veniam non provident? Dolores sapiente eaque in esse officiis odio libero!</p>
                         <div class="dropdown">
                             <i class="font-light-grey fa-solid fa-angle-down"></i>
@@ -173,7 +173,7 @@
                             </div>
                         </div>
                         <span class="time text-small">16:15</span>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="main-footer">
                     <div class="row">

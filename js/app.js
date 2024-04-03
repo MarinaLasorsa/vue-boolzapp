@@ -169,6 +169,12 @@ createApp({
     data() {
       return {
         contactsList: contactsList,
+        currentContactIndex: 0
       }
+    },
+    methods: {
+        changeCurrentIndex(i) {
+            this.currentContactIndex = i
+        }
     }
 }).mount('#app')
