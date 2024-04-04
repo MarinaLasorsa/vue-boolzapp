@@ -49,7 +49,7 @@
 
                 </div>
                 <ul class="side-contacts">
-                    <li class="card-box" v-for="(contact, i) in contactsList" @click="changeCurrentIndex(i)">
+                    <li v-for="(contact, i) in contactsList" :class="i === currentContactIndex ? 'active' : ''" class="card-box" @click="changeCurrentIndex(i)">
                         <div class="card">
                             <img class="avatar" :src="contact.avatar"/>
                             <div>
@@ -154,13 +154,13 @@
                         <p>{{message.message}}</p>
                         <div class="dropdown">
                             <i class="font-light-grey fa-solid fa-angle-down"></i>
-                            <div class="dropdown-content">
-                                <a rel="noopener" target="_blank" href="#">Rispondi</a>
-                                <a rel="noopener" target="_blank" href="#">Inoltra</a>
-                                <a rel="noopener" target="_blank" href="#">Cancella</a>
-                            </div>
+                            <ul class="dropdown-content">
+                                <li><a rel="noopener" target="_blank" href="#">Rispondi</a></li>
+                                <li><a rel="noopener" target="_blank" href="#">Inoltra</a></li>
+                                <li><a rel="noopener" target="_blank" href="#">Cancella</a></li>
+                            </ul>
                         </div>
-                        <span class="time text-small">16:13</span>
+                        <span class="time text-small">{{message.date.slice(11,16)}}</span>
                     </div>
                     <!--<div class="chat-box chat-box-received">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tenetur, ad molestiae nemo eum ducimus sed quos, cupiditate similique veniam non provident? Dolores sapiente eaque in esse officiis odio libero!</p>

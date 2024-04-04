@@ -173,6 +173,10 @@ body {
     justify-content: space-between;
 }
 
+.card-box.active, .card-box:hover {
+    background-color: #f0f0f0;
+}
+
 /*MAIN CHAT*/
 
 .main-body {
@@ -206,6 +210,10 @@ body {
     position: absolute;
     right: 5px;
     bottom: 5px;
+}
+
+.dropdown i {
+    margin-left: 5px;
 }
 
 .dropdown-content {
