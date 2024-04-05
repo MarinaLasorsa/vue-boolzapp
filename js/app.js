@@ -170,12 +170,29 @@ createApp({
       return {
         contactsList: contactsList,
         currentContactIndex: 0,
-        newMessageText: ""
+        newMessageText: "",
+        search: ""
       }
+    },
+    computed: {
+        currentContact() {
+            return this.contactsList[this.currentContactIndex]
+        }
     },
     methods: {
         changeCurrentIndex(i) {
             this.currentContactIndex = i
+        },
+        reply(messages) {
+            setTimeout(() => {
+                const newReply = {
+                    date: '10/01/2020 16:30:56',
+                    message: "ok",
+                    status: 'received'
+                };
+    
+                messages.push(newReply);
+            }, 1000)
         },
         addMessage() {
             const newMessage = {
@@ -184,19 +201,14 @@ createApp({
                 status: 'sent'
             };
 
-            this.contactsList[this.currentContactIndex].messages.push(newMessage);
+            const messages = this.contactsList[this.currentContactIndex].messages;
+
+            messages.push(newMessage);
 
             this.newMessageText = "";
 
-            setTimeout(() => {
-                const reply = {
-                    date: '10/01/2020 16:30:56',
-                    message: "ok",
-                    status: 'received'
-                };
-    
-                this.contactsList[this.currentContactIndex].messages.push(reply);
-            }, 1000)
+            this.reply(messages);
+
         },
     }
 }).mount('#app')

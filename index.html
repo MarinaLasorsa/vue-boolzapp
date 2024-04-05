@@ -43,10 +43,9 @@
                 </div>
                 <div class="side-search">
                     <div class="row">
-                        <input class="input-bar" type="text" id="chat" name="new-chat" placeholder="Cerca o inizia una nuova chat" />
+                        <input class="input-bar" type="text" id="search" name="search" v-model="search" placeholder="Cerca o inizia una nuova chat" />
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-
                 </div>
                 <ul class="side-contacts">
                     <li v-for="(contact, i) in contactsList" :class="i === currentContactIndex ? 'active' : ''" class="card-box" @click="changeCurrentIndex(i)">
@@ -136,9 +135,9 @@
                 <div class="main-header">
                     <div class="row space-between">
                         <div class="card">
-                            <img class="avatar" :src="contactsList[currentContactIndex].avatar"/>
+                            <img class="avatar" :src="currentContact.avatar"/>
                             <div>
-                                <p>{{contactsList[currentContactIndex].name}}</p>
+                                <p>{{currentContact.name}}</p>
                                 <p class="text-small font-dark-grey">Ultimo accesso oggi alle 16:26</p>
                             </div>
                         </div>  
@@ -150,7 +149,7 @@
                     </div>
                 </div>
                 <div class="main-body">
-                    <div v-for="(message, i) in contactsList[currentContactIndex].messages" :class="message.status === 'sent' ? 'chat-box-sent' : 'chat-box-received'"  class="chat-box">
+                    <div v-for="(message, i) in currentContact.messages" :class="message.status === 'sent' ? 'chat-box-sent' : 'chat-box-received'"  class="chat-box">
                         <p>{{message.message}}</p>
                         <div class="dropdown">
                             <i class="font-light-grey fa-solid fa-angle-down"></i>
@@ -178,7 +177,7 @@
                 <div class="main-footer">
                     <div class="row">
                         <i class="fa-regular fa-face-smile"></i>
-                        <input v-model="newMessageText" class="input-bar" type="text" id="chat" name="new-chat" placeholder="Scrivi un messaggio" @keyup.enter="addMessage" />
+                        <input v-model.trim="newMessageText" class="input-bar" type="text" id="chat" name="new-chat" placeholder="Scrivi un messaggio" @keyup.enter="addMessage" />
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
