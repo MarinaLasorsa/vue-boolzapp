@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <ul class="side-contacts">
-                    <li v-for="(contact, i) in contactsList" :class="i === currentContactIndex ? 'active' : ''" class="card-box" @click="changeCurrentIndex(i)">
+                    <li v-for="(contact, i) in contactsList" :class="{active: i === currentContactIndex, 'd-none': contact.visible === false}" class="card-box" @click="changeCurrentIndex(i)">
                         <div class="card">
                             <img class="avatar" :src="contact.avatar"/>
                             <div>
